@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="darkToggle" />
+    🌙 Dark Mode
+  </label>
+
+  <h1>📚 Book Finder</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search books by title or author">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="filters">
+    <select id="printType">
+      <option value="">All Types</option>
+      <option value="books">Books</option>
+      <option value="magazines">Magazines</option>
+    </select>
+
+    <select id="langRestrict">
+      <option value="">All Languages</option>
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+    </select>
+  </div>
+
+  <div id="historyContainer">
+    <h3>Recent Searches:</h3>
+    <ul id="searchHistory"></ul>
+  </div>
+
+  <div id="loader" class="hidden">🔄 Loading...</div>
+  <div id="results"></div>
+
+  <div class="pagination">
+    <button id="prevBtn">⬅️ Prev</button>
+    <button id="nextBtn">Next ➡️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
